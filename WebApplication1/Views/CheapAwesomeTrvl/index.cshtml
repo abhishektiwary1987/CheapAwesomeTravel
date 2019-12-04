@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/HotelJs/hoteldtl.js"></script>
+    <script>
+        var getHotelUrl = "@Url.Action("fetchHotelDetails", "CheapAwesomeTrvl")";
+    </script>
+
+</head>
+<body>
+    <div>
+        <table align="center">
+            <tr>
+                <td>
+                    Select Destination Name:
+                </td>
+                <td>
+                    <select id="ddlDestinationName">
+                        <option value="0">--Select--</option>
+                        <option value="279">Destination 279 </option>
+                        <option value="1419">Destination 1419 </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Number of Nights:
+                </td>
+                <td>
+                    <input type="text" id="txt_NoOfNights" class="allownumericwithoutdecimal"  />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="btnSearch" value="Search" />
+                </td>
+
+            </tr>
+        </table>
+        <br />
+        <br />
+
+        <table id="tblHotelDtl" style="width:100%;text-align:center"></table>
+    </div>
+</body>
+</html>
+
